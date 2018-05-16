@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { clickButton } from './actions';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
+    const {
+      clickButton,
+      newValue
+    } = this.props;
+
     return (
       <Router>
         <div className="App">
@@ -24,8 +32,11 @@ class App extends Component {
               <button className="btn btn-primary">Go to index</button>
             </Link>
           )}/>
-          <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
+          <p>
+            <h2>{newValue}</h2>
+            <button className="btn btn-danger" onClick={() => clickButton('updated')}>
+              Update State
+            </button>
           </p>
         </div>
       </Router>
@@ -33,4 +44,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = store => ({
+  newValue: store.clickState.newValue
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators({ clickButton }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
