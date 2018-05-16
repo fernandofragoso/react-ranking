@@ -1,0 +1,11 @@
+.RankingSection {
+  margin: 10px;
+}
+
+.RankingSection__column-position {
+  width: 50px;
+}
+
+.RankingSection__column-points {
+  width: 100px;
+}
