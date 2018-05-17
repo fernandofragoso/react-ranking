@@ -7,14 +7,12 @@ import RankingSection from './components/RankingSection';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div className="App">
-          <div className="container-fluid">
-            <AppHeader />
-            <RankingSection />
-          </div>
+      <div className="App">
+        <div className="container-fluid">
+          <AppHeader />
+          <RankingSection />
         </div>
-      </Router>
+      </div>
     );
   }
 }

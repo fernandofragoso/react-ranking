@@ -18,8 +18,8 @@ class RankingSection extends Component {
     return (
       <div className="RankingSection row">
         <div className="col-md-8">
-        <table className="table table-sm table-hover">
-          <thead className="thead-light">
+        <table className="table table-hover">
+          <thead className="thead-dark">
             <tr>
               <th scope="col" className="RankingSection__column-position"></th>
               <th scope="col">Nome</th>
@@ -31,7 +31,10 @@ class RankingSection extends Component {
               return (
                 <tr key={player._id}>
                   <th scope="row" className="text-center">{index+1}</th>
-                  <td>{player.name}</td>
+                  <td>
+                    <img className="RankingSection__avatar-image rounded-circle" src="player.png" />
+                    {player.name}
+                  </td>
                   <td className="text-center">{player.points}</td>
                 </tr>
               )
