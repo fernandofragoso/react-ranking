@@ -2,16 +2,3 @@
   margin: 10px;
 }
 
-.RankingSection__column-position {
-  width: 50px;
-}
-
-.RankingSection__column-points {
-  width: 100px;
-}
-
-.RankingSection__avatar-image {
-  width: 35px;
-  margin: -10px 10px -10px 0;
-  border: 1px solid #333;
-}

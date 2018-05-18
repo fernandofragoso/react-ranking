@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './RankingSection.css';
+import Ranking from './Ranking';
 
 class RankingSection extends Component {
 
@@ -18,29 +19,7 @@ class RankingSection extends Component {
     return (
       <div className="RankingSection row">
         <div className="col-md-8">
-        <table className="table table-hover">
-          <thead className="thead-dark">
-            <tr>
-              <th scope="col" className="RankingSection__column-position"></th>
-              <th scope="col">Nome</th>
-              <th scope="col" className="RankingSection__column-points text-center">Pontos</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.players.map((player, index) => {
-              return (
-                <tr key={player._id}>
-                  <th scope="row" className="text-center">{index+1}</th>
-                  <td>
-                    <img className="RankingSection__avatar-image rounded-circle" src="player.png" />
-                    {player.name}
-                  </td>
-                  <td className="text-center">{player.points}</td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+          <Ranking players={this.state.players} />
         </div>
         <div className="col-md-4">
           Coluna 2

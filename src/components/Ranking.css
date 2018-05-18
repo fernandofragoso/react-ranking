@@ -1,0 +1,13 @@
+.Ranking__column-position {
+  width: 50px;
+}
+
+.Ranking__column-points {
+  width: 100px;
+}
+
+.Ranking__avatar-image {
+  width: 35px;
+  margin: -10px 10px -10px 0;
+  border: 1px solid #333;
+}
