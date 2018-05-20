@@ -3,10 +3,6 @@ import './Ranking.css';
 
 class Ranking extends Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <table className="table table-hover">
@@ -23,7 +19,7 @@ class Ranking extends Component {
               <tr key={player._id}>
                 <th scope="row" className="text-center">{index+1}</th>
                 <td>
-                  <img className="Ranking__avatar-image rounded-circle" src="player.png" />
+                  <img alt="avatar" className="Ranking__avatar-image rounded-circle" src="player.png" />
                   {player.name}
                 </td>
                 <td className="text-center">{player.points}</td>
